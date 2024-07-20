@@ -44,10 +44,6 @@ Built portfolio with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui
 
 5. Open the [dataset file](./src/data/resume.tsx) and make changes.
 
-# License
-
-Licensed under the [MIT license](https://github.com/pnguyen215/portfolio4next/blob/main/LICENSE.md).
-
 # Icons, Patterns and Styles
 
 This project use
@@ -56,3 +52,7 @@ This project use
 - [Shadcn UI](https://ui.shadcn.com/)
 - [Magic UI](https://magicui.design)
 - [Radix Icon](https://www.radix-ui.com/icons)
+
+# License
+
+Licensed under the [MIT license](https://github.com/pnguyen215/portfolio4next/blob/main/LICENSE.md).
