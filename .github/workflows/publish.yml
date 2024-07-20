@@ -31,11 +31,11 @@ jobs:
 
       - name: Build with Next.js 🏗️
         env: 
-          NEXT_PUBLIC_BASE_PATH="/portfolio4next"
-          NEXT_PUBLIC_OUTPUT="export"
-          NEXT_PUBLIC_TS_IGNORE_BUILD_ERRORS=true
-          NEXT_PUBLIC_ESLINT_IGNORE_DURING_BUILDS=true
-          NEXT_PUBLIC_REACT_STRICT_MODE=true
+          NEXT_PUBLIC_BASE_PATH: "/portfolio4next"
+          NEXT_PUBLIC_OUTPUT: "export"
+          NEXT_PUBLIC_TS_IGNORE_BUILD_ERRORS: "true"
+          NEXT_PUBLIC_ESLINT_IGNORE_DURING_BUILDS: "true"
+          NEXT_PUBLIC_REACT_STRICT_MODE: "true"
         run: npx next build
 
       - name: Upload artifact 📡
