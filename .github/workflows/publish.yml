@@ -28,9 +28,10 @@ jobs:
         uses: actions/configure-pages@v4
         with:
           static_site_generator: next
+          enablement: true # Enable Pages if not already enabled
 
       - name: Build with Next.js 🏗️
-        env: 
+        env:
           NEXT_PUBLIC_BASE_PATH: "/portfolio4next"
           NEXT_PUBLIC_OUTPUT: "export"
           NEXT_PUBLIC_TS_IGNORE_BUILD_ERRORS: "true"
