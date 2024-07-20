@@ -39,6 +39,9 @@ jobs:
           NEXT_PUBLIC_REACT_STRICT_MODE: "true"
         run: pnpm build
 
+      - name: Verify build output 📦
+        run: ls -l ./out
+
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
