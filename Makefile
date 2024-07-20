@@ -1,7 +1,7 @@
 # Define the directory where the build artifacts will be stored
 BUILD_DIR=.next
 # Declare targets as phony to avoid conflicts with files of the same name
-.PHONY: dev start clean install reinstall build live
+.PHONY: dev start clean install reinstall build live tree
 
 # Target to start the development server with hot reloading
 dev:
@@ -13,6 +13,7 @@ start: dev
 clean:
 	clear
 	rm -rf $(BUILD_DIR)
+	rm -rf logs
 # Target to install project dependencies
 install:
 	pnpm install
@@ -26,8 +27,8 @@ build: clean
 # Target to start the production server
 live: build
 	next start
+# Create logs directory if not exists
+# Generate project structure and save it to logs/project_structure.txt
 tree:
-	# Create logs directory if not exists
 	mkdir -p logs
-	# Generate project structure and save it to logs/project_structure.txt
 	tree -I "node_modules|.git|.DS_Store" > ./logs/project_structure.txt
