@@ -10,6 +10,7 @@ runs:
 
     - name: Install pnpm
       run: npm install -g pnpm
+      shell: bash
 
     - name: Cache dependencies ⚡
       id: cache_dependencies
@@ -21,5 +22,5 @@ runs:
         key: pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
 
     - name: Install dependencies 🔧
-      shell: bash
       run: pnpm install
+      shell: bash
