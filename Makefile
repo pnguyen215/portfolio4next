@@ -14,6 +14,7 @@ clean:
 	clear
 	rm -rf $(BUILD_DIR)
 	rm -rf logs
+	rm -rf out
 # Target to install project dependencies
 install:
 	pnpm install
@@ -25,8 +26,17 @@ reinstall:
 build: clean
 	pnpm build
 # Target to start the production server
-live: build
+live-local: build
 	next start
+live: clean
+	NEXT_PUBLIC_BASE_PATH="" \
+	NEXT_PUBLIC_PAGE_EXTENSIONS="js,jsx,ts,tsx,md,mdx" \
+	NEXT_PUBLIC_OUTPUT="export" \
+	NEXT_PUBLIC_TS_IGNORE_BUILD_ERRORS=true \
+	NEXT_PUBLIC_ESLINT_IGNORE_DURING_BUILDS=true \
+	NEXT_PUBLIC_REACT_STRICT_MODE=true \
+	pnpm build
+	npx serve@latest out 
 # Create logs directory if not exists
 # Generate project structure and save it to logs/project_structure.txt
 tree:
