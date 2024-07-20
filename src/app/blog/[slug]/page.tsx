@@ -18,11 +18,11 @@ export async function generateMetadata({
     title,
     publishedAt: publishedTime,
     summary: description,
-    image,
+    // image,
   } = post.metadata;
-  let ogImage = image
-    ? `${DATASET.url}${image}`
-    : `${DATASET.url}/og?title=${title}`;
+  // let ogImage = image
+  //   ? `${DATASET.url}${image}`
+  //   : `${DATASET.url}/og?title=${title}`;
 
   return {
     title,
@@ -33,17 +33,17 @@ export async function generateMetadata({
       type: "article",
       publishedTime,
       url: `${DATASET.url}/blog/${post.slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
+      // images: [
+      //   {
+      //     url: ogImage,
+      //   },
+      // ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
+      // images: [ogImage],
     },
   };
 }
