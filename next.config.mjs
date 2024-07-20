@@ -11,6 +11,9 @@ const nextConfig = {
   },
   output: process.env.NEXT_PUBLIC_OUTPUT || "standalone",
   reactStrictMode: true,
+  images: {
+    disableStaticImages: true,
+  },
 };
 
 export default nextConfig;
