@@ -86,7 +86,9 @@ jobs:
           NEXT_PUBLIC_TS_IGNORE_BUILD_ERRORS: "true"
           NEXT_PUBLIC_ESLINT_IGNORE_DURING_BUILDS: "true"
           NEXT_PUBLIC_REACT_STRICT_MODE: "true"
-        run: ${{ steps.detect-package-manager.outputs.runner }} pnpm build
+        run: |
+          ${{ steps.detect-package-manager.outputs.runner }} pnpm build
+          ${{ steps.detect-package-manager.outputs.runner }} pnpm export
 
       - name: Verify source 📦
         run: ls -l ./
