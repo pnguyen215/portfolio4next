@@ -15,6 +15,7 @@ clean:
 	rm -rf $(BUILD_DIR)
 	rm -rf logs
 	rm -rf out
+	rm -rf dist
 # Target to install project dependencies
 install:
 	pnpm install

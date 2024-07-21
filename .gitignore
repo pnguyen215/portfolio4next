@@ -29,7 +29,8 @@ lib-cov
 # Next.js build output directory
 /.next/                    
 # Next.js static export directory
-/out/                      
+/out/   
+/dist/                   
 
 # production
 # Production build output directory
