@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // basePath: "",
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || "/portfolio4next",
+  // basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
   typescript: {
     ignoreBuildErrors:
       process.env.NEXT_PUBLIC_TS_IGNORE_BUILD_ERRORS === "true",
@@ -10,21 +10,13 @@ const nextConfig = {
     ignoreDuringBuilds:
       process.env.NEXT_PUBLIC_ESLINT_IGNORE_DURING_BUILDS === "true",
   },
-  // output: "export",
-  output: process.env.NEXT_PUBLIC_OUTPUT || "standalone",
-  reactStrictMode: true,
-  // experimental: {
-  //   images: {
-  //     // This will cause an error
-  //     allowFutureImage: true,
-  //   },
-  // },
-  // images: {
-  //   disableStaticImages: true,
-  // },
+  output: process.env.NEXT_PUBLIC_OUTPUT || "export",
+  // output: process.env.NEXT_PUBLIC_OUTPUT || "standalone",
   images: {
-    domains: ["pnguyen215.github.io"], // Replace 'username' with your actual GitHub username
+    unoptimized: true,
+    domains: ["pnguyen215.github.io"],
   },
+  reactStrictMode: true,
 };
 
 export default nextConfig;
