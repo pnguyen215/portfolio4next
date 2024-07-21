@@ -10,7 +10,6 @@ const nextConfig = {
       process.env.NEXT_PUBLIC_ESLINT_IGNORE_DURING_BUILDS === "true",
   },
   output: process.env.NEXT_PUBLIC_OUTPUT || "standalone",
-  distDir: "dist",
   images: {
     unoptimized: true,
     domains: ["pnguyen215.github.io"],
