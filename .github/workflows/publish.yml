@@ -39,7 +39,7 @@ jobs:
           NEXT_PUBLIC_REACT_STRICT_MODE: "true"
         run: |
           pnpm build
-          pnpm export
+          next export
 
       - name: Verify build output 📦
         run: ls -l ./out
