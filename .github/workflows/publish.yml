@@ -86,8 +86,8 @@ jobs:
           NEXT_PUBLIC_TS_IGNORE_BUILD_ERRORS: "true"
           NEXT_PUBLIC_ESLINT_IGNORE_DURING_BUILDS: "true"
           NEXT_PUBLIC_REACT_STRICT_MODE: "true"
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
-
+        run: ${{ steps.detect-package-manager.outputs.runner }} pnpm build
+ 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
