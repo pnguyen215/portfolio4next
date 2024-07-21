@@ -88,7 +88,6 @@ jobs:
           NEXT_PUBLIC_REACT_STRICT_MODE: "true"
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} pnpm build
-          ${{ steps.detect-package-manager.outputs.runner }} export
 
       - name: Verify source 📦
         run: ls -l ./
