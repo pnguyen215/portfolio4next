@@ -15,7 +15,7 @@ Built portfolio with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui
 1. Clone this repository:
 
    ```bash
-   git clone --depth 1 https://github.com/pnguyen215/portfolio4next
+   git clone --depth 1 https://github.com/pnguyen215/portfolio4next.git
    ```
 
 2. Move to the cloned directory
