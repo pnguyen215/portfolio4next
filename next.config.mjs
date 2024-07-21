@@ -13,6 +13,12 @@ const nextConfig = {
   output: "export",
   // output: process.env.NEXT_PUBLIC_OUTPUT || "standalone",
   reactStrictMode: true,
+  experimental: {
+    images: {
+      // This will cause an error
+      allowFutureImage: true,
+    },
+  },
   // images: {
   //   disableStaticImages: true,
   // },
