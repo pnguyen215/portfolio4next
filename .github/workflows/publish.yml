@@ -87,7 +87,10 @@ jobs:
           NEXT_PUBLIC_ESLINT_IGNORE_DURING_BUILDS: "true"
           NEXT_PUBLIC_REACT_STRICT_MODE: "true"
         run: ${{ steps.detect-package-manager.outputs.runner }} pnpm build
- 
+
+      - name: Verify source 📦
+        run: ls -l ./
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
